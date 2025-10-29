@@ -5,7 +5,7 @@ import Islands from './components/Islands';
 
 function App() {
   return (
-    <Router basename="/_vyt.dev">
+    <Router> {/* basename="/_vyt.dev"> */}
       <div className="synthwave-holding">
         <div className="sun"></div>
         <div className="underlay"></div>
