@@ -9,10 +9,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anta&family=Epunda+Slab:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/assets/index-ByuknZ0S.js"></script>
+    <script type="module" crossorigin src="/assets/index-CUGzAB35.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-DgQL37Xd.css">
   </head>
   <body>
+    <script>
+      // Check if we were redirected from 404.html
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.pathname) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
     <div id="root"></div>
   </body>
 </html>
