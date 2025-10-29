@@ -1,22 +1,23 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 export default function Home() {
-    var eventLocked: boolean = false;
-    const newText: string = "Welcome, you";
-    const upper_letters: string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    const lower_letters: string = "abcdefghijklmnopqrstuvwxyzê";
+    const eventLocked = useRef(false);
+
+    const newText : string = "Welcome, you";
+    const upper_letters : string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    const lower_letters : string = "abcdefghijklmnopqrstuvwxyzê";
 
     const [currentText, setCurrentText] = useState("Bem-vindo, você");
     // const textRef = useRef<HTMLHeadingElement>(null); // old artifact
     
     const handleMouseOver = () => {
-        if (eventLocked)
+        if (eventLocked.current)
             return;
-        eventLocked = true;
+        eventLocked.current = true;
         console.log("mouse overed!");
 
         // core logic section
-        let iteration: number = 0;
+        let iteration : number = 0;
         const interval = setInterval(() => { // glorified for-loop
             setCurrentText(prev => // describes each iteration
             prev
@@ -36,7 +37,7 @@ export default function Home() {
         }, 40);
 
         setTimeout(() => {
-            eventLocked = false;
+            eventLocked.current = false;
         }, 4000);
     }
     
