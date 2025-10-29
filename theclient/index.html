@@ -16,8 +16,11 @@
       (function() {
         var redirect = sessionStorage.redirect;
         delete sessionStorage.redirect;
-        if (redirect && redirect != location.pathname) {
-          history.replaceState(null, null, redirect);
+        if (redirect && redirect !== location.href) {
+          var route = redirect.replace(location.origin + '/_vyt.dev/', '');
+          if (route) {
+            history.replaceState(null, null, '/_vyt.dev/' + route);
+          }
         }
       })();
     </script>

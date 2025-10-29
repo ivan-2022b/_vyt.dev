@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useState, useRef } from "react";
 
 export default function Home() {
@@ -54,7 +55,7 @@ export default function Home() {
         <>
             <div className="welcome-holding">
                 <h1 id="welcome" className="welcome" onMouseOver={handleMouseOver}>{currentText}</h1>
-                <p>Visit <a href="/practicing">practicing</a> & <a href="/recursive-islands">island mapping</a>!</p>
+                <p>Visit <Link to="/practicing">practicing</Link> & <Link to="/recursive-islands">island mapping</Link>!</p>
             </div>
         </>
     )

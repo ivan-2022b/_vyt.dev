@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script>
-      // Store the path and redirect to index.html
-      sessionStorage.redirect = location.pathname + location.search + location.hash;
-      location.replace(location.origin + location.pathname.split('/').slice(0, 2).join('/'));
+      // Store the current path for the SPA to handle
+      sessionStorage.redirect = location.href;
+      // Redirect to the base of your app
+      location.replace(location.origin + '/_vyt.dev/');
     </script>
   </head>
   <body>
