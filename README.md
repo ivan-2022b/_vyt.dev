@@ -6,16 +6,24 @@
 
 `npm create vite@latest` ... w/ "theclient" name & typescript variant
 
-`cd theclient`
+`cd .\theclient\`
 
 `npm install`
 
 ### To Run (development):
-.NET> `dotnet run`
+.dev> `dotnet run`
 
-theclient> `npm run dev` / `npm start`
+.dev\theclient> `npm run dev` / `npm start`
 
 ### Production:
-theclient> `npm run build`
+.dev\theclient> `npm run build`
 
-_.. then running the top-level Program.cs w/ `dotnet run` will include the React.js client app_
+_.. this will create necessary build files, then running the top-level Program.cs w/ `dotnet run` will include the React.js client app_
+
+### Git Stuff (standard, removed dist from .gitignore)
+.dev> `git init`
+.dev> `git add .`
+.dev> `git commit -m "first commit"`
+.dev> `git branch -M main`
+.dev> `git remote add origin https://github.com/ivan-2022b/_vyt.dev.git`
+.dev> `git push -u origin main`
