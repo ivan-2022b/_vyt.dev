@@ -9,8 +9,15 @@ builder.Services.AddCors(options =>
         policy =>
         {
             policy.WithOrigins("http://localhost:5173") // URL of the React app
-                  .AllowAnyHeader()
-                  .AllowAnyMethod();
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        });
+    options.AddPolicy("AllowGitHubPages",
+        policy =>
+        {
+            policy.WithOrigins("https://ivan-2022b.github.io") // production
+                .AllowAnyHeader()
+                .AllowAnyMethod();
         });
 });
 
@@ -45,6 +52,7 @@ else // production configuration
         FileProvider = new PhysicalFileProvider(
             Path.Combine(Directory.GetCurrentDirectory(), "theclient", "dist"))
     });*/
+    app.UseCors("AllowGitHubPages");
     app.UseExceptionHandler("/error");
 }
 
