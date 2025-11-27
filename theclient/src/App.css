@@ -42,15 +42,15 @@ body { /* just body */
   overflow: hidden; }
 
 #root { /* just #root */
-  padding: 2rem;
   color: white;
   height: 100vh;
   width: 100vw;
 
   display: flex;
-  flex-direction: column;
+  overflow: auto;
+  /* flex-direction: column;
   justify-content: center;
-  /* align-items: center;
+  align-items: center;
   place-items: baseline; */ }
 
 .synthwave-holding { /* holds sun, underlay, and glitch */
@@ -153,7 +153,8 @@ body { /* just body */
 
 /* welcome-holding & welcome */
 .welcome-holding { 
-  margin-left: 33.125vw; }
+  margin-left: 36.125vw;
+  align-self: center; }
 .welcome {
   font-family: 'Inter', Verdana, sans-serif;
   font-size: 3rem;
@@ -271,5 +272,12 @@ body { /* just body */
 @keyframes myframes {
   from {background-position: 100% 100%;}
   to {background-position: 0% 20%;} }
+
+.main-islands {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: inherit; }
 
 /* the end */

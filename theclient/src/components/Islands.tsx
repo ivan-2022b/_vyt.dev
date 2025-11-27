@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import i0_clownfish from '../assets/i0_clown_fish.png';
 
 export default function Islands() { console.log("before function ..");
     var myData : string[] = [];
@@ -247,15 +248,15 @@ export default function Islands() { console.log("before function ..");
     }, []); // empty dependency array ensures this runs once on mount
 
     return (
-        <>
-            <h5 style={{float: "right"}}>Directory? <a style={{textDecoration: "underline"}}>@directory</a></h5>
+        <main className="main-islands">
+            { /* <h5 style={{float: "right"}}>Directory? <a style={{textDecoration: "underline"}}>@{"???"}</a></h5> */ }
             <h2 id="output-header">Recursive Search ..</h2>
-            <div style={{float: "right"}}>
+            { /* <div style={{float: "right"}}>
                 <form id="try_xmysql" method="post">
                     <input id="that-element" className="button-styling" type="submit" value="Try XMySQL" />
                     <p id="this-element"> not implemented; xmysql availablity? @cmdOutput</p>
                 </form>
-            </div>
+            </div> */ }
             <div className="input-container">
                 <form id="postForm" method="post">
                     <input className="input-styling" type="number" id="inputColumns" min="1" name="inputColumns" placeholder="# of Columns .." />
@@ -267,16 +268,17 @@ export default function Islands() { console.log("before function ..");
             {/* script */}
 
             <br />
-            <div className="grid-container" id="myGrid-container">
+            <br />
+            <div className="grid-container" id="myGrid-container" style={{margin: "1vh 0 7vh"}}>
                 <div className="dynamic-grid" itemID="myGrid" style={{gridTemplateColumns: _bitColumns}}>
                     <div className="grid-styling">
-                        <img className="fish-icon" src="./src/assets/i0_clown_fish.png" />
+                        <img className="fish-icon" src={i0_clownfish} />
                     </div>
                 </div>
             </div>
 
             {/* script replaced */}
 
-        </>
+        </main>
     )
 }

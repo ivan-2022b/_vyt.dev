@@ -13,7 +13,8 @@ function App() {
       </div>
       <Routes>
         <Route index element={<Home />} />
-        <Route path="/privacy" element={<p>Privacy page</p>} />
+        <Route path="/privacy" element={<p>Privacy page!</p>} />
+        <Route path="/practicing" element={<p>Practicing page!</p>} />
         <Route path="/recursive-islands" element={<Islands />} />
       </Routes>
       <footer className="classy-footer">
