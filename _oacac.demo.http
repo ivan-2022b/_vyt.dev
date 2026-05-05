@@ -1,0 +1,6 @@
+@_oacac.demo_HostAddress = http://localhost:5045
+
+GET {{_oacac.demo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
