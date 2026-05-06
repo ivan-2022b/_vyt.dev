@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("_oacac.demo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9751a9311a29b90a0d59fd088a72d6bd71aa0ab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae8432375e6250fc3d814ba22b15ca4dda3e7771")]
 [assembly: System.Reflection.AssemblyProductAttribute("_oacac.demo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("_oacac.demo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
