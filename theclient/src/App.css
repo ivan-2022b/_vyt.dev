@@ -395,9 +395,10 @@ main { display: flex;
 }
 
 /* make interactive links focus-visible */
-a:focus, button:focus, .accessible-outline { display: flex;
+a:focus, button:focus, .accessible-outline {
   outline: none;
-  box-shadow: 0 0 0 4px #09907bd4;
+  box-shadow: 0 0 0 4px #09907bd4; }
+.accessible-outline { display: flex;
   align-items: center; }
 .accessible-outline:link { color: var(--links) }
 .accessible-outline:visited { color: var(--links-visited) }
