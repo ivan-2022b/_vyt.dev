@@ -17,8 +17,8 @@ import Footer from './components/Footer_Element';
 // The App component also handles toggling dark mode and applying the appropriate theme based on user preference stored in localStorage.
 function App() {
   // theme & state management
-  const savedMode = localStorage.getItem('oacac-theme') === 'true';
-  const [darkMode, setDarkMode] = useState(savedMode ?? false)
+  const savedMode = localStorage.getItem('oacac-theme') === 'light';
+  const [lightMode, setLightMode] = useState(savedMode ?? false) // default to dark mode :)
   const [currentScrollState, setCurrentScrollState] = useState(false) // shows / hides header
   
   applyTheme()
@@ -35,24 +35,24 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [window.innerHeight]) // only re-run if the window height changes, which is the threshold for showing/hiding the header
 
-  function toggleDarkMode() : void {
-    setDarkMode(prev => {
+  function toggleLightMode() : void {
+    setLightMode(prev => {
       localStorage.setItem('oacac-theme', (!prev).toString()); // save theme changes to storage
       return !prev
     })
   }
 
   function applyTheme() : void {
-    console.log(`Before applying theme. Dark mode is: ${darkMode}`)
-    darkMode ?
-      document.documentElement.setAttribute('data-theme', 'dark') :
-      document.documentElement.removeAttribute('data-theme')
-    console.log(`Theme applied. Dark mode is: ${darkMode}`)
+    console.log(`Before applying theme. Light mode is: ${lightMode}`)
+    lightMode ?
+      document.documentElement.setAttribute('data-theme', 'light') :
+      document.documentElement.hasAttribute('data-theme') && document.documentElement.removeAttribute('data-theme')
+    console.log(`Theme applied. Light mode is: ${lightMode}`)
   }
 
   return ( // the actual html structure of the app
     <Router>
-      <Header currentScrollState={currentScrollState} darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <Header currentScrollState={currentScrollState} lightMode={lightMode} toggleLightMode={toggleLightMode} />
       <main id="main-content" tabIndex={-1}>
       <Routes>
         <Route index element={<Main />} />

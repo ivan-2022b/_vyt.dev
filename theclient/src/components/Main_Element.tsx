@@ -11,43 +11,43 @@ export default function Main() {
                         <article className="card" tabIndex={0} aria-labelledby="service-one">
                             <h3 id="service-one">Energy / Utility Assistance</h3>
                             <p>Help with energy bills and utility support for qualifying households.</p>
-                            <p><a className="card-link" href="/liheap">Learn More</a></p>
+                            <p>+ other info</p>
                         </article>
 
                         <article className="card" tabIndex={0} aria-labelledby="service-two">
                             <h3 id="service-two">Housing (Section 8)</h3>
                             <p>Information and applications for housing assistance and vouchers.</p>
-                            <p><a className="card-link" href="/housing">Learn More</a></p>
+                            <p>+ other info</p>
                         </article>
 
                         <article className="card" tabIndex={0} aria-labelledby="service-three">
                             <h3 id="service-three">Weatherization</h3>
                             <p>Energy-saving improvements to reduce heating and cooling costs.</p>
-                            <p><a className="card-link" href="/weatherization">Learn More</a></p>
+                            <p>+ other info</p>
                         </article>
 
                         <article className="card" tabIndex={0} aria-labelledby="service-four">
                             <h3 id="service-four">Head Start</h3>
                             <p>Early childhood education, health, and family support services.</p>
-                            <p><a className="card-link" href="/head-start">Learn More</a></p>
+                            <p>+ other info</p>
                         </article>
 
                         <article className="card" tabIndex={0} aria-labelledby="service-five">
                             <h3 id="service-five">Family Planning</h3>
                             <p>Resources and guidance for family planning and reproductive health.</p>
-                            <p><a className="card-link" href="/family-planning">Learn More</a></p>
+                            <p>+ other info</p>
                         </article>
 
                         <article className="card" tabIndex={0} aria-labelledby="service-six">
                             <h3 id="service-six">Foster Grandparents</h3>
                             <p>Volunteer opportunities for seniors to mentor and support children.</p>
-                            <p><a className="card-link" href="/foster-grandparents">Learn More</a></p>
+                            <p>+ other info</p>
                         </article>
 
                         <article className="card" tabIndex={0} aria-labelledby="service-seven">
                             <h3 id="service-seven">CSBG Outreach</h3>
                             <p>Community services and outreach programs funded by CSBG.</p>
-                            <p><a className="card-link" href="/csbg-outreach">CSBG's Page</a></p>
+                            <p>+ other info</p>
                         </article>
 
                         {/* placeholders to fill 3x3 grid visually if needed */}

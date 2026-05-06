@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-export default function Header(props: {currentScrollState: boolean, darkMode: boolean, toggleDarkMode: () => void}) {
+export default function Header(props: {currentScrollState: boolean, lightMode: boolean, toggleLightMode: () => void}) {
     return (
         <>
             <a className="skip-link" href="#main-content">Skip to content</a>
@@ -26,11 +26,11 @@ export default function Header(props: {currentScrollState: boolean, darkMode: bo
 
                         <div className="controls">
                             <button id="contrast-toggle"
-                                aria-pressed={props.darkMode ? 'true' : 'false'}
-                                aria-label="toggle dark mode"
-                                title="toggle dark mode"
-                                onClick={props.toggleDarkMode}>
-                            {props.darkMode ? 'Dark' : 'Light'}
+                                aria-pressed={props.lightMode ? 'true' : 'false'}
+                                aria-label="toggle light mode"
+                                title="toggle light mode"
+                                onClick={props.toggleLightMode}>
+                            {props.lightMode ? 'Light' : 'Dark'}
                             </button>
                         </div>
                     </div>
