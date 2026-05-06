@@ -189,7 +189,7 @@
   --fg: #fff;
   --links: #66aaff;
   --links-visited: #aa00ed;
-  --muted: #d4d4d4;
+  --muted: #efefef;
   --card-bg: #111;
   --accent: #fff;
   --focus: 4px solid #09907b;
@@ -234,7 +234,7 @@ a.skip-link {
   border-radius: 4px;
   z-index: 1000;
   transform: translateY(-70%);
-  transition: transform .18s ease; }
+  transition: transform .25s ease; }
 a.skip-link:focus {
   transform: none;
   outline: var(--focus); }

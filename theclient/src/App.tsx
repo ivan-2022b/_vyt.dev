@@ -17,7 +17,7 @@ import Footer from './components/Footer_Element';
 // The App component also handles toggling dark mode and applying the appropriate theme based on user preference stored in localStorage.
 function App() {
   // theme & state management
-  const savedMode = localStorage.getItem('oacac-theme') === 'light';
+  const savedMode = localStorage.getItem('oacac-theme') === 'true';
   const [lightMode, setLightMode] = useState(savedMode ?? false) // default to dark mode :)
   const [currentScrollState, setCurrentScrollState] = useState(false) // shows / hides header
   
@@ -43,10 +43,9 @@ function App() {
   }
 
   function applyTheme() : void {
-    console.log(`Before applying theme. Light mode is: ${lightMode}`)
     lightMode ?
       document.documentElement.setAttribute('data-theme', 'light') :
-      document.documentElement.hasAttribute('data-theme') && document.documentElement.removeAttribute('data-theme')
+      (document.documentElement.hasAttribute('data-theme') && document.documentElement.removeAttribute('data-theme'))
     console.log(`Theme applied. Light mode is: ${lightMode}`)
   }
 
