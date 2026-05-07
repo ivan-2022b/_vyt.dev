@@ -42,13 +42,13 @@ export default function Main() {
 
                 <article className="card" tabIndex={0} aria-labelledby="service-seven">
                     <h3 id="service-seven">CSBG Outreach</h3>
-                    <p>Community services and outreach programs funded by CSBG.</p>
+                    <p>Community services and outreach programs funded by HHS via the Missouri Department of Social Services.</p>
                     <p>+ other info</p>
                 </article>
 
                 {/* placeholders to fill 3x3 grid visually if needed */}
-                <article className="card placeholder" aria-hidden="true" tabIndex={-1}></article>
-                <article className="card placeholder" aria-hidden="true" tabIndex={-1}></article>
+                {/*<article className="card placeholder" aria-hidden="true" tabIndex={-1}></article>*/}
+                {/*<article className="card placeholder" aria-hidden="true" tabIndex={-1}></article>*/}
             </div>
         </section>
     )
